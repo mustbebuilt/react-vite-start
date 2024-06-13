@@ -1,71 +1,8 @@
-<h1 align="center">
-  Vite Template React
-</h1>
+Use the instructions in the [wiki](https://github.com/mustbebuilt/react-vite-start/wiki).
 
-<p align="center">
-  <a href="https://github.com/SafdarJamal/vite-template-react/releases">
-    <img src="https://img.shields.io/github/v/release/SafdarJamal/vite-template-react" alt="GitHub Release (latest by date)" />
-  </a>
-  <a href="https://github.com/SafdarJamal/vite-template-react/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/SafdarJamal/vite-template-react" alt="License" />
-  </a>
-</p>
+## Build on 
 
-<p align="center">
-    A <a href="https://vitejs.dev">Vite</a> + <a href="https://react.dev">React</a> starter template.
-</p>
-
-![Vite Template React](https://github.com/SafdarJamal/vite-template-react/assets/48409548/4b1eb99e-01b8-4752-91c0-76930e7948c1)
-
-## Folder Structure
-
-No configuration or complicated folder structures, just the files you need to build your app:
-
-```
-vite-template-react
-├── node_modules
-├── public
-│   ├── favicon.svg
-│   └── robots.txt
-└── src
-    ├── App.css
-    ├── App.jsx
-    ├── App.test.jsx
-    ├── index.css
-    ├── index.jsx
-    └── logo.svg
-    └── setupTests.js
-├── .gitignore
-├── index.html
-├── package.json
-├── README.md
-├── vite.config.js
-```
-
-## Development
-
-To get a local copy of the code, clone it using git:
-
-```
-git clone https://github.com/SafdarJamal/vite-template-react.git
-cd vite-template-react
-```
-
-Make it your own:
-
-```
-rm -rf .git && git init && npm init
-git add .
-git commit -m "Initial commit"
-```
-
-Install dependencies:
-
-```
-npm i
-```
-
-Now, you can start a local web server by running:
+[Safdar Jamal](https://safdarjamal.github.io).
 
 ```
 npm start
