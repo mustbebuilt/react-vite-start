@@ -6,7 +6,7 @@ import { useState } from'react';
 
 function App() {
 
-const [currentPage, setCurrentPage] = useState('home');
+const [currentPage, setCurrentPage] = useState('digital');
 
   const handleNavigation = (page) => {
     setCurrentPage(page);
@@ -18,7 +18,8 @@ const [currentPage, setCurrentPage] = useState('home');
         
         
 
-      {currentPage === 'home' && <><DigitalClock /><AnalogueClock /></> }
+      {currentPage === 'digital' &&  <DigitalClock />}
+      {currentPage === 'analogue' && <AnalogueClock />}
       {currentPage === 'staffList' && <StaffTable />}
 
         

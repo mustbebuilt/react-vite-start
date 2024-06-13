@@ -17,7 +17,7 @@ const DigitalClock = ()=> {
   return (
     <div>
       <h2>Digital Clock</h2>
-      <p>{hours}:{minutes}:{seconds}</p>
+      <div className="digitalClock">{hours}:{minutes}:{seconds}</div>
     </div>
   );
 }

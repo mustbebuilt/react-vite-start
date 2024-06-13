@@ -8,7 +8,8 @@ const Header = ({ onNavigate }) => {
     <header>
       <nav>
         <ul>
-          <li><a href="#" onClick={(ev) => handleNavigation(ev, 'home')}>Home</a></li>
+          <li><a href="#" onClick={(ev) => handleNavigation(ev, 'digital')}>Home</a></li>
+          <li><a href="#" onClick={(ev) => handleNavigation(ev, 'analogue')}>Analogue Clock</a></li>
           <li><a href="#" onClick={(ev) => handleNavigation(ev, 'staffList')}>Staff List</a></li>
         </ul>
       </nav>

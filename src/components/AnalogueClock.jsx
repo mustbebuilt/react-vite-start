@@ -1,47 +1,40 @@
-import React, { useState, useEffect, useRef } from 'react';
-
+import React, { useState, useEffect } from 'react';
+import ClockHand from './ClockHand';
 const AnalogueClock = () => {
-  const clockFaceRef = useRef(null);
-  const secondHandRef = useRef(null);
-  const minuteHandRef = useRef(null);
-  const hourHandRef = useRef(null);
+    const [secondsDegrees, setSecondsDegrees] = React.useState(0);
+    const [minutesDegrees, setMinutesDegrees] = React.useState(0);
+    const [hoursDegrees, setHoursDegrees] = React.useState(0);
 
   useEffect(() => {
     const updateClock = () => {
       const now = new Date();
+
       const seconds = now.getSeconds();
-      const secondsDegrees = ((seconds / 60) * 360) - 90;
-      secondHandRef.current.style.transform = `rotate(${secondsDegrees}deg)`;
+      setSecondsDegrees(((seconds / 60) * 360) - 90);
 
       const minutes = now.getMinutes();
-      const minutesDegrees = ((minutes / 60) * 360) - 90;
-      minuteHandRef.current.style.transform = `rotate(${minutesDegrees}deg)`;
+      setMinutesDegrees(((minutes / 60) * 360) - 90);
 
       const hours = now.getHours() + minutes / 60;
-      const hoursDegrees = ((hours / 12) * 360) - 90;
-      hourHandRef.current.style.transform = `rotate(${hoursDegrees}deg)`;
+      setHoursDegrees(((hours / 12) * 360) - 90);
     };
 
-    const intervalId = setInterval(updateClock, 1000);
+    // Call updateClock once immediately to set the initial time
+    updateClock(); 
 
+    const intervalId = setInterval(updateClock, 1000);
+   
     return () => {
       clearInterval(intervalId);
     };
   }, []);
-
-  return (
-    <div>
-      <h2>Analogue</h2>
-      <div>
-        <div ref={clockFaceRef} id="clockFace">
-          <div ref={secondHandRef} id="secondHand"></div>
-          <div ref={minuteHandRef} id="minHand"></div>
-          <div ref={hourHandRef} id="hrHand"></div>
+        return (
+          <div id="clockFace">
+          <ClockHand id="secondHand" angle={secondsDegrees} />
+          <ClockHand id="minuteHand" angle={minutesDegrees} />
+          <ClockHand id="hourHand" angle={hoursDegrees} />
           <div id="pin"></div>
         </div>
-      </div>
-    </div>
-  );
-};
+        );
+      };
 export default AnalogueClock;
-
