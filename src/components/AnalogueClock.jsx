@@ -29,12 +29,15 @@ const AnalogueClock = () => {
     };
   }, []);
         return (
+          <>
+          <h2>Analogue Clock</h2>
           <div id="clockFace">
           <ClockHand id="secondHand" angle={secondsDegrees} />
           <ClockHand id="minuteHand" angle={minutesDegrees} />
           <ClockHand id="hourHand" angle={hoursDegrees} />
           <div id="pin"></div>
         </div>
+        </>
         );
       };
 export default AnalogueClock;
