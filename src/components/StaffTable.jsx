@@ -1,8 +1,5 @@
 const StaffTable = () => {
 
-  const [staff, setStaff] = useState([]);
-  
-
   return (
     <div>
       <h2>Staff Table</h2>
@@ -15,9 +12,10 @@ const StaffTable = () => {
           </tr>
         </thead>
         <tbody>
-        <tr>
+          <tr>
             <td>Dummy Name</td>
             <td>Dummy Email </td>
+          </tr>
         </tbody>
       </table>
     </div>
